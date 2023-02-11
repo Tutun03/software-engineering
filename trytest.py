@@ -41,3 +41,8 @@ fruits = ("apple", "banana", "cherry")
 print(green)
 print(yellow)
 print(red)
+
+thistuple = ("apple", "banana", "cherry")
+for i,index in enumerate(thistuple):
+  print(i)
+  print(index)
