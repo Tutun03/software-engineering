@@ -33,3 +33,11 @@ thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 l = thistuple[-7:-1]
 p = list(reversed(l))
 print(p)
+
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
