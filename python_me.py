@@ -22,11 +22,15 @@ fruits.extend(points)
 
 print(fruits)
 
-txt = "aniketacharya30gmailcom"
+txt = "aniketanicharya30gmailcom"
 txt1="aniketacharya30@gmail.com"
 f=txt.index("ni")
+f1=txt.find("ni")
+f2=txt.count("ani")
 x = txt.isalnum()
 y=txt1.isalnum()
 print(x)
 print(y)
 print(f)
+print(f1)
+print(f2)
