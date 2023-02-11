@@ -25,6 +25,9 @@ print(fruits)
 txt = "aniketanicharya30gmailcom"
 print(txt.capitalize)
 print(txt.casefold)
+print(txt.isupper)
+print(txt.islower)
+print('#'.join(txt))
 txt1="aniketacharya30@gmail.com"
 f=txt.index("ni")
 f1=txt.find("ni")
@@ -36,3 +39,12 @@ print(y)
 print(f)
 print(f1)
 print(f2)
+myDict = ['aniket','tutun','ratan']
+mySeparator = "TEST"
+for i,index in enumerate(myDict):
+    
+    print(str(i).join(myDict))
+
+
+
+print(x)
