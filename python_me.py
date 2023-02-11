@@ -23,6 +23,8 @@ fruits.extend(points)
 print(fruits)
 
 txt = "aniketanicharya30gmailcom"
+print(txt.capitalize)
+print(txt.casefold)
 txt1="aniketacharya30@gmail.com"
 f=txt.index("ni")
 f1=txt.find("ni")
