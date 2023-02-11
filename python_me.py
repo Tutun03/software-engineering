@@ -56,3 +56,12 @@ if  type(x) is not  int:
 x = -1
 if x < 0:
   raise Exception("Sorry, no numbers below zero")
+
+#The finally block gets executed no matter if the try block raises any errors or not:
+x=45
+try:
+  print(x)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished")
