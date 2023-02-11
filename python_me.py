@@ -21,3 +21,10 @@ points = (1, 4, 5, 9)
 fruits.extend(points)
 
 print(fruits)
+
+txt = "aniketacharya30gmailcom"
+txt1="aniketacharya30@gmail.com"
+x = txt.isalnum()
+y=txt1.isalnum()
+print(x)
+print(y)
