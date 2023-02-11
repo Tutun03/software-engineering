@@ -46,3 +46,14 @@ thistuple = ("apple", "banana", "cherry")
 for i,index in enumerate(thistuple):
   print(i)
   print(index)
+
+def myfunc():
+  x = 300
+  def myinnerfunc():
+    print(x)
+  print("hello")
+  myinnerfunc()
+  
+
+myfunc()
+
