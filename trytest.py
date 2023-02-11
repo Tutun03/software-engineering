@@ -28,3 +28,8 @@ print(len(thistuple))
 tuple1 = ("abc", 34, True, 40, "male")
 
 print(tuple1)
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+l = thistuple[-7:-1]
+p = list(reversed(l))
+print(p)
