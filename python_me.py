@@ -24,7 +24,9 @@ print(fruits)
 
 txt = "aniketacharya30gmailcom"
 txt1="aniketacharya30@gmail.com"
+f=txt.index("ni")
 x = txt.isalnum()
 y=txt1.isalnum()
 print(x)
 print(y)
+print(f)
