@@ -20,3 +20,7 @@ print(a.isidentifier())
 print(b.isidentifier())
 print(c.isidentifier())
 print(d.isidentifier())
+
+
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
