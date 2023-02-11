@@ -48,3 +48,11 @@ for i,index in enumerate(myDict):
 
 
 print(x)
+x = "hello"
+
+if  type(x) is not  int:
+  raise Exception("Only integers are allowed")
+
+x = -1
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
