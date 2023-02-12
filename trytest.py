@@ -57,3 +57,36 @@ def myfunc():
 
 myfunc()
 
+def fun(lis,p):
+  if(len(lis)!=len(p)):
+    print("duplicates are found")
+  else:
+    print("not found")
+
+
+lis=[2,3,5,6,7,2,2,4]
+p=set(lis)
+fun(lis,p)
+l21=[[60,80,90],[10,30]]
+for i in range(len(l21)):
+  print(i)
+s="sumit Anand uemk"
+s1=""
+for i in s:
+    if( i not in " aeiou" and i not in "AEIOU" and i not in s1):
+        s1 +=i 
+print(s1, len(s1))
+
+s="geeks"
+s1=list(s)
+print(s1)
+for i in range(2,len(s1)):
+    print(i)
+l=s1.count("e")
+print(l)
+
+l1=(20,30,10,60)
+l3=str(l1)
+print(type(l3))
+l2=sorted(l1,reverse=True)
+print(l2)
