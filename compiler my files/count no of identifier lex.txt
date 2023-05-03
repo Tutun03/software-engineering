@@ -1,0 +1,15 @@
+%{
+#include<iostream.h>
+int count=0;
+%}
+digit[0-9]
+letter[a-zA-Z]
+%%
+{letter}{letter|digit}* { count++;}
+%%
+int main()
+{
+printf("enter the input");
+yyparse;
+printf("%d",count);
+}
