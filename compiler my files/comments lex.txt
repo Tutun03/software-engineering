@@ -1,0 +1,21 @@
+%{
+include <stdio.h>
+int nf=0;
+%}
+
+%%
+"/*"[a-zA-Z0-9 \t\n]*"*/  {nf++;}
+"//"[a-zA-Z0-9 \t]*"\n"    {nf++;}
+%%
+
+int main(char argc,char* argv[])
+{
+if(argc==2)
+yyin=fopen(argv[1],'r');
+else
+printf("enter the input");
+yyin=stdin;
+yylex();
+
+printf("no of comment lines %d",nf);
+}

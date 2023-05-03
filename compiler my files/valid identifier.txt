@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+   char str[100];
+   int flag=1;  // initialize flag to 1
+   int i=0;
+   printf("enter a string: ");
+   fgets(str,sizeof str,stdin);
+   
+   while(str[i]!='\0')
+   {
+       if (!isalnum(str[i])) // check if the current character is not alphanumeric
+       {
+           flag = 0; // set flag to 0 if the string contains a non-alphanumeric character
+           break;
+       }
+       i++;
+   }
+   
+   if(flag==1)  // use == for comparison
+   {
+       printf("valid");
+   }
+   else
+   {
+       printf("not valid");
+   }
+   
+   return 0;
+}

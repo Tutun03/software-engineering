@@ -1,0 +1,84 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <ctype.h>
+
+char stack[200];
+int top=-1;
+
+void push(char x)
+{
+    top++;
+    stack[top]=x;
+}
+
+char pop()
+{
+    if(top==-1)
+    {
+        return -1;
+    }
+    else{
+        return stack[top--];
+    }
+}
+
+int priority (char x)
+{
+    if(x=='(')
+    {
+        return 0;
+    }
+    if(x=='+'||x=='-')
+    {
+        return 1;
+    }
+    if(x=='*'||x=='/')
+    {
+        return 2;
+    }
+    return -1;
+}
+
+int main()
+{
+    char str[100];
+    char x;
+    int i=0;
+    printf("enter an expression: ");
+    fgets(str,sizeof str,stdin);
+   
+    while(str[i]!='\0')
+    {
+        if (str[i]=='(') 
+        {
+            push(str[i]);
+        }
+        else if(isalnum(str[i]))
+        {
+            printf("%c",str[i]);   
+        }
+        else if(str[i]==')')
+        { 
+            while((x = pop()) != '(')
+            {
+                printf("%c",x);
+            }           
+        }
+        else
+        {
+            while(priority(stack[top])>=priority(str[i]))
+            {
+                printf("%c",pop());
+            }
+            push(str[i]);
+        }
+        i++;
+    }
+   
+    while(top!=-1)
+    {
+        printf("%c",pop());
+    }
+  
+    return 0;
+}

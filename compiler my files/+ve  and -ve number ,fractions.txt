@@ -1,0 +1,27 @@
+%{
+#include<stdio.h>
+int p=0,n=0;
+int pf=0;nf=0;
+%}
+
+%%
+[+]?[0-9]+  {p++;}
+[-][0-9]+   {n++;}
+[+]?[0-9]*\.[0-9]+ {pf++;}
+[-][0-9]*\.[0-9]+  {nf--;}
+%%
+
+int main()
+{
+printf("enter no");
+yylex();
+printf("positive int %d",p++);
+printf("negative int %d",n++);
+printf("positive frac %d",pf++);
+printf("negative frac%d",nf++);
+}
+int yywrap()
+{
+return 1;
+}
+

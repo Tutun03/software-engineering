@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    int total = 0;
+    char expr[100];
+    char op = '+';
+    int num = 0;
+    printf("Enter an arithmetic expression: ");
+    fgets(expr, sizeof expr, stdin);
+    for (int i = 0; expr[i] != '\n'; i++) {
+        if (isdigit(expr[i])) {
+            num = num * 10 + (expr[i] - '0');
+        } else if (expr[i] == '+' || expr[i] == '-' || expr[i] == '*' || expr[i] == '/') {
+            switch (op) {
+                case '+':
+                    total = total + num;
+                    break;
+                case '-':
+                    total = total - num;
+                    break;
+                case '*':
+                    total = total * num;
+                    break;
+                case '/':
+                    total = total / num;
+                    break;
+            }
+            op = expr[i];
+            num = 0;
+        }
+    }
+    switch (op) {
+        case '+':
+            total = total + num;
+            break;
+        case '-':
+            total = total - num;
+            break;
+        case '*':
+            total = total * num;
+            break;
+        case '/':
+            total = total / num;
+            break;
+    }
+    printf("Result: %d\n", total);
+    return 0;
+}
